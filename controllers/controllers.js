@@ -10,9 +10,9 @@ const form = (req, res) => {
 
 const userData = async (req, res) => {
         const visitor = new Visitor({
-           name: req.params.name
+           name: req.query.name
         })
-console.log('Este es el params:', req.params.name)
+        console.log('este es el req.params',req.query.name)
     await visitor.save();
     res.send(`<h1>El visitante fue almacenado con éxito</h1>`);
     console.log(visitor);

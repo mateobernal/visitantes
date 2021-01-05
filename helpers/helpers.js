@@ -1,6 +1,6 @@
 const anonimo = (req, res, next) => {
-    if (!req.params.name){
-        req.params.name = 'Anónimo'
+    if (!req.query.name){
+        req.query.name = 'Anónimo'
     }
 
     next();
